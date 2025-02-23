@@ -28,5 +28,5 @@ class Word(Base):
     added_by = Column(String(100), nullable=True)
     created_at = Column(TIMESTAMP, server_default="CURRENT_TIMESTAMP")
 
-# Create tables in the database
+# Create tables in the database if they do not exist
 Base.metadata.create_all(bind=engine)
